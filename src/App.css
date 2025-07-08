@@ -1,0 +1,110 @@
+/* Tailwind CSS is already included in the project */
+/* Additional custom styles if needed */
+
+/* Scrollbar styling */
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.3s ease-out;
+}
+
+/* Glass effect utilities */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Task priority indicators */
+.priority-high {
+    border-left: 4px solid #ef4444;
+    background-color: #fef2f2;
+}
+
+.priority-medium {
+    border-left: 4px solid #f59e0b;
+    background-color: #fffbeb;
+}
+
+.priority-low {
+    border-left: 4px solid #6b7280;
+    background-color: #f9fafb;
+}
+
+/* Hover effects */
+.hover-scale {
+    transition: transform 0.2s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Focus styles */
+.focus-ring {
+    transition: all 0.2s ease;
+}
+
+.focus-ring:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: #3b82f6;
+    ring-offset: 2px;
+}
+
+/* Task completion animations */
+.task-completed {
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+.task-completed .task-text {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+/* Loading states */
+.loading-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
